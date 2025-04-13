@@ -1,9 +1,18 @@
 import Navbar from "@/components/Navbar"
 import Sidebar from "@/components/Sidebar"
+import { Metadata } from "next";
 import { ReactNode } from "react"
+export const metadata: Metadata = {
+    title: "Toom",
+    description: "Video calling app",
+    icons :{
+      icon : '/icons/logo.svg'
+    }
+  };
 
 
-const HoomLayout = ({ children } : { children : ReactNode}) =>{
+const RootLayout = ({ children } : { children : ReactNode}) =>{
+  
     return (
         <main className="relative">
             <Navbar/>
@@ -20,4 +29,4 @@ const HoomLayout = ({ children } : { children : ReactNode}) =>{
     )
 }
 
-export default HoomLayout
+export default RootLayout
